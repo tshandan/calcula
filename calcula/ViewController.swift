@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     }
     var flag=0
     var temp=0
+    var temp1=0
     @IBOutlet weak var edite: UITextField!
 
     @IBAction func num1(sender: AnyObject) {
@@ -58,10 +59,12 @@ class ViewController: UIViewController {
     @IBAction func add(sender: AnyObject) {
         flag=1
         temp=(Int)(edite.text!)!
+        edite.text=""
     }
     @IBAction func result(sender: AnyObject) {
         if(flag==1){
-            
+            temp1=(Int)(edite.text!)!+temp
+            edite.text="\(temp1)"
         
         }
     }
